@@ -1,0 +1,39 @@
+let arr = [];
+    for( let i=1; i<=1000;i++){
+        arr.push(i);
+    }
+    console.log(arr);
+
+    // here please start your solution
+    // using closures, functions and (map,filter,reduce)
+    const divisibleFactory = function(x){
+	 divisibleArr = function(arr){
+	var f=arr.filter(function(i){return i% x== 0;});
+	 return f.length;
+   },
+   arrCount = function(arr){ return arr.length;}
+   
+return factory= { Arr:divisibleArr,
+count:arrCount }
+    }
+const divid5 = divisibleFactory (5);
+var arr5 = divid5.Arr(arr);
+var count = divid5.count(arr5);
+console.log(arr5)
+console.log(count)
+
+const divid10 = divisibleFactory (10);
+var arr10 = divid10.Arr(arr);
+count = divid10.count(arr10);
+console.log(arr10);
+console.log(count);
+
+const divid3 = divisibleFactory (3);
+var arr3= divid3.Arr(arr);
+count = divid3.count(arr3);
+console.log(count);
+const divid21 = divisibleFactory (21);
+var arr21 = divid21.Arr(arr);
+ count = divid21.count(arr21);
+console.log(arr21)
+console.log(count)
